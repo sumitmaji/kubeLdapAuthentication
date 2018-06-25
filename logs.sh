@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-source config
+source configuration
 docker logs $CONTAINER_NAME

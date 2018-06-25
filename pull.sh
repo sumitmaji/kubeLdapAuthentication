@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source config
+source configuration
 
 docker pull $REGISTRY/$REPO_NAME
