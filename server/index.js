@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 // app.use(passport.initialize());
 
-app.post('/test', (req, res) => {
+app.post('/', (req, res) => {
   console.log('Received')
   res.send('Hi')
 })
