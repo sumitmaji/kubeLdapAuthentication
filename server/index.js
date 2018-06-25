@@ -15,11 +15,16 @@ var OPTS = {
 
 var app = express();
 
-passport.use(new LdapStrategy(OPTS));
+// passport.use(new LdapStrategy(OPTS));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(passport.initialize());
+// app.use(passport.initialize());
+
+app.post('/test', (req, res) => {
+  console.log('Received')
+  res.send('Hi')
+})
 
 app.post('/login', passport.authenticate('ldapauth', {session: false}), function(req, res) {
   res.send({status: 'ok'});
