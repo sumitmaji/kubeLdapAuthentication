@@ -26,6 +26,10 @@ app.post('/', (req, res) => {
   res.send('Hi')
 })
 
+app.post('/healthz', (req, res) => {
+  res.send('Ok')
+})
+
 app.post('/login', passport.authenticate('ldapauth', {session: false}), function(req, res) {
   res.send({status: 'ok'});
 });
