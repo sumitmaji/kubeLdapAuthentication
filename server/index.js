@@ -26,7 +26,7 @@ app.post('/', (req, res) => {
   res.send('Hi')
 })
 
-app.post('/healthz', (req, res) => {
+app.get('/healthz', (req, res) => {
   res.send('Ok')
 })
 
