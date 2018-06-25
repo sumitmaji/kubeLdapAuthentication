@@ -17,8 +17,8 @@ var app = express();
 
 // passport.use(new LdapStrategy(OPTS));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: false}));
 // app.use(passport.initialize());
 
 app.get('/ldapauth', (req, res) => {
