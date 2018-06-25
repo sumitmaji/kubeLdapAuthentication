@@ -1,0 +1,8 @@
+IMAGE_NAME=sumit/ldapauth
+REGISTRY=master.cloud.com:5000
+REPO_NAME=ldapauth
+CONTAINER_NAME=ldapauth
+BUILD_PATH=/tmp
+RELEASE_NAME=ldapauth
+PATH_TO_CHART=chart
+DEPLOY=true
