@@ -34,4 +34,4 @@ app.post('/login', passport.authenticate('ldapauth', {session: false}), function
   res.send({status: 'ok'});
 });
 
-app.listen(8080);
+app.listen(5004);
