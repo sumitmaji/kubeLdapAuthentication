@@ -21,7 +21,7 @@ var app = express();
 // app.use(bodyParser.urlencoded({extended: false}));
 // app.use(passport.initialize());
 
-app.get('/ldapauth', (req, res) => {
+app.get('/ldapauth/test', (req, res) => {
   console.log('Received')
   res.send('Hi')
 })
