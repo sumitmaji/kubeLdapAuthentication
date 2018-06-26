@@ -1,7 +1,7 @@
-var express      = require('express'),
-    passport     = require('passport'),
-    bodyParser   = require('body-parser'),
-    LdapStrategy = require('passport-ldapauth').Strategy;
+var express = require('express'),
+  passport = require('passport'),
+  bodyParser = require('body-parser'),
+  LdapStrategy = require('passport-ldapauth');
 
 var OPTS = {
   server: {
@@ -22,7 +22,9 @@ passport.use(new LdapStrategy(OPTS),
   });
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(passport.initialize());
 
 app.get('/ldapauth/test', (req, res) => {
@@ -33,8 +35,12 @@ app.get('/healthz', (req, res) => {
   res.send('Ok')
 })
 
-app.post('/ldapauth/login', passport.authenticate('ldapauth', {session: false}), function(req, res) {
-  res.send({status: 'ok'});
+app.post('/ldapauth/login', passport.authenticate('ldapauth', {
+  session: false
+}), function(req, res) {
+  res.send({
+    status: 'ok'
+  });
 });
 
 app.use((err, req, res, next) => {
