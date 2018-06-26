@@ -15,11 +15,7 @@ var OPTS = {
 
 var app = express();
 
-passport.use(new LdapStrategy(OPTS),
-  function(user, done) {
-    console.log('Called');
-    return done(null, user);
-  });
+passport.use(new LdapStrategy(OPTS));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
