@@ -1,7 +1,7 @@
 var express      = require('express'),
     passport     = require('passport'),
     bodyParser   = require('body-parser'),
-    LdapStrategy = require('passport-ldapauth');
+    LdapStrategy = require('passport-ldapauth').Strategy;
 
 var OPTS = {
   server: {
