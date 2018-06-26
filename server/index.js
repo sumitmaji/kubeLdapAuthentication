@@ -33,4 +33,9 @@ app.post('/ldapauth/login', passport.authenticate('ldapauth', {session: false}),
   res.send({status: 'ok'});
 });
 
+app.use((err, req, res, next) => {
+  console.log(err)
+  res.status(403).send(err);
+})
+
 app.listen(5004);
