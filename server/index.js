@@ -29,7 +29,8 @@ app.get('/healthz', (req, res) => {
   res.send('Ok')
 })
 
-app.post('/ldapauth/login', passport.authenticate('ldapauth', {session: false}), function(req, res) {
+app.post('/ldapauth/login',  function(req, res) {
+  console.log(req.body)
   res.send({status: 'ok'});
 });
 
